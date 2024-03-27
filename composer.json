@@ -1,0 +1,15 @@
+{
+    "name": "luishjacinto/clean_architecture_php",
+    "autoload": {
+        "psr-4": {
+            "Luishjacinto\\CleanArchitecturePhp\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Luis Henrique Jacinto Da Silva",
+            "email": "luis.silva@datamex.com.br"
+        }
+    ],
+    "require": {}
+}

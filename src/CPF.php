@@ -30,13 +30,13 @@ class CPF implements \Stringable {
         }
     }
 
-    private function validateNumber(string $number) {
-        $number = preg_replace('/[^0-9]/', '', $number);
+    private function validateNumber(string $formattedNumber) {
+        $number = preg_replace('/[^0-9]/', '', $formattedNumber);
 
         for ($i = 0; $i < 10; $i++) {
             if (preg_match('/^' . $i . '{11}$/', $number)) {
                 throw new \InvalidArgumentException(
-                    "Número de CPF '{$number}' inválido"
+                    "Número de CPF '{$formattedNumber}' inválido"
                 );
             }
         }
@@ -57,7 +57,7 @@ class CPF implements \Stringable {
 
         if ($digit1 != $number[9]) {
             throw new \InvalidArgumentException(
-                "Número de CPF '{$number}' inválido"
+                "Número de CPF '{$formattedNumber}' inválido"
             );
         }
     }

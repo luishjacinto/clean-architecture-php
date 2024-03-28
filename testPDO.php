@@ -5,7 +5,7 @@ use Luishjacinto\CleanArchitecturePhp\Domain\Students\Student;
 use Luishjacinto\CleanArchitecturePhp\Infrastructure;
 
 
-$pdo = new \PDO('sqlite:db.sqlite');
+$pdo = new \PDO('sqlite:db/db.sqlite');
 
 $repo = new Infrastructure\Students\RepositoryWithPDO($pdo);
 $student1 = Student::build('992.053.280-06', 'test1@example.com', 'Luis');

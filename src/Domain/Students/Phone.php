@@ -33,6 +33,14 @@ class Phone implements \Stringable {
         }
     }
 
+    public function getDDD() {
+        return $this->ddd;
+    }
+
+    public function getNumber() {
+        return $this->number;
+    }
+
     public function __toString(): string {
         return "({$this->ddd}) {$this->number}";
     }

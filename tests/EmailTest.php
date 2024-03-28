@@ -13,7 +13,7 @@ class EmailTest extends TestCase {
     }
 
     public function testEmailValid() {
-        $address = 'dev@gmail.com';
+        $address = 'test@example.com';
         $email = new Email($address);
 
         $this->assertSame((string) $email, $address);

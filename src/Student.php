@@ -16,6 +16,16 @@ class Student {
         $this->name = $name;
     }
 
+    public static function build(string $cpfNumber, string $emailAddress, string $name): Student {
+        $student = new Student(
+            new CPF($cpfNumber),
+            new Email($emailAddress),
+            $name
+        );
+
+        return $student;
+    }
+
     public function getCPF() {
         return $this->cpf;
     }

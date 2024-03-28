@@ -5,11 +5,18 @@
             "Luishjacinto\\CleanArchitecturePhp\\": "src/"
         }
     },
+    "autoload-dev": {
+        "psr-4": {
+            "Luishjacinto\\CleanArchitecturePhp\\Tests": "tests/"
+        }
+    },
     "authors": [
         {
             "name": "Luis Henrique Jacinto Da Silva",
             "email": "luis.silva@datamex.com.br"
         }
     ],
-    "require": {}
+    "require-dev": {
+        "phpunit/phpunit": "11"
+    }
 }

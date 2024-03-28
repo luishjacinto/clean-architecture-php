@@ -1,6 +1,8 @@
 <?php
 
-namespace Luishjacinto\CleanArchitecturePhp;
+namespace Luishjacinto\CleanArchitecturePhp\Domain\Recommendations;
+
+use Luishjacinto\CleanArchitecturePhp\Domain\Students\Student;
 
 class Recommendation {
 

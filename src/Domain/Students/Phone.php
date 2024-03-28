@@ -1,6 +1,6 @@
 <?php
 
-namespace Luishjacinto\CleanArchitecturePhp;
+namespace Luishjacinto\CleanArchitecturePhp\Domain\Students;
 
 class Phone implements \Stringable {
 

@@ -1,8 +1,8 @@
 <?php
 
-namespace Tests;
+namespace Tests\Domain;
 
-use Luishjacinto\CleanArchitecturePhp\CPF;
+use Luishjacinto\CleanArchitecturePhp\Domain\CPF;
 use PHPUnit\Framework\TestCase;
 
 class CPFTest extends TestCase {

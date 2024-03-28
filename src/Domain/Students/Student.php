@@ -1,6 +1,9 @@
 <?php
 
-namespace Luishjacinto\CleanArchitecturePhp;
+namespace Luishjacinto\CleanArchitecturePhp\Domain\Students;
+
+use Luishjacinto\CleanArchitecturePhp\Domain\CPF;
+use Luishjacinto\CleanArchitecturePhp\Domain\Email;
 
 
 class Student {

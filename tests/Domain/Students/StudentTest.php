@@ -1,11 +1,11 @@
 <?php
 
-namespace Tests;
+namespace Tests\Domain\Students;
 
-use Luishjacinto\CleanArchitecturePhp\CPF;
-use Luishjacinto\CleanArchitecturePhp\Email;
-use Luishjacinto\CleanArchitecturePhp\Phone;
-use Luishjacinto\CleanArchitecturePhp\Student;
+use Luishjacinto\CleanArchitecturePhp\Domain\CPF;
+use Luishjacinto\CleanArchitecturePhp\Domain\Email;
+use Luishjacinto\CleanArchitecturePhp\Domain\Students\Phone;
+use Luishjacinto\CleanArchitecturePhp\Domain\Students\Student;
 use PHPUnit\Framework\TestCase;
 
 class StudentTest extends TestCase

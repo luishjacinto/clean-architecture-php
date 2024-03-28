@@ -1,6 +1,6 @@
 <?php
 
-namespace Luishjacinto\CleanArchitecturePhp;
+namespace Luishjacinto\CleanArchitecturePhp\Domain;
 
 class CPF implements \Stringable {
 

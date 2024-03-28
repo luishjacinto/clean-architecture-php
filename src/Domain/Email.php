@@ -1,6 +1,6 @@
 <?php
 
-namespace Luishjacinto\CleanArchitecturePhp;
+namespace Luishjacinto\CleanArchitecturePhp\Domain;
 
 class Email implements \Stringable {
 

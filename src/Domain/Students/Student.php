@@ -11,7 +11,7 @@ class Student {
     private CPF $cpf;
     private Email $email;
     private string $name;
-    private array $phones;
+    private array $phones = [];
 
     public function __construct(CPF $cpf, Email $email, string $name) {
         $this->cpf = $cpf;

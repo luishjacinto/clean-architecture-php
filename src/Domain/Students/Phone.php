@@ -1,6 +1,7 @@
 <?php
 
 namespace Luishjacinto\CleanArchitecturePhp\Domain\Students;
+use Luishjacinto\CleanArchitecturePhp\Domain\Students\Exceptions\InvalidPhoneNumber;
 
 class Phone implements \Stringable {
 
@@ -8,13 +9,13 @@ class Phone implements \Stringable {
     private string $number;
 
     public function __construct(string $ddd, string $number) {
-        $this->validate($ddd, $number);
         $this->ddd = $ddd;
         $this->number = $number;
+        $this->validate();
     }
 
-    private function validate(string $ddd, string $number) {
-        $fullNumber = "{$ddd} {$number}";
+    private function validate() {
+        $fullNumber = "{$this->ddd} {$this->number}";
 
         $fullNumberInvalid = filter_var(
             $fullNumber,
@@ -27,9 +28,7 @@ class Phone implements \Stringable {
         ) === false;
 
         if ($fullNumberInvalid) {
-            throw new \InvalidArgumentException(
-                "Número de Telefone '{$fullNumber}' inválido"
-            );
+            throw new InvalidPhoneNumber($this);
         }
     }
 

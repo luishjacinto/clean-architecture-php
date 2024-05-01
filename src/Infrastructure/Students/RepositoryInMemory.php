@@ -4,6 +4,8 @@ namespace Luishjacinto\CleanArchitecturePhp\Infrastructure\Students;
 
 use Luishjacinto\CleanArchitecturePhp\Domain\CPF;
 use Luishjacinto\CleanArchitecturePhp\Domain\Students;
+use Luishjacinto\CleanArchitecturePhp\Domain\Students\Exceptions\PhoneAlreadyExists;
+use Luishjacinto\CleanArchitecturePhp\Domain\Students\Exceptions\StudentNotFound;
 use Luishjacinto\CleanArchitecturePhp\Domain\Students\Student;
 
 /**
@@ -33,7 +35,7 @@ class RepositoryInMemory implements Students\Repository {
         $student = $this->students[(string) $cpf];
 
         if (empty($student)) {
-            throw new \Exception('Aluno não encontrado');
+            throw new StudentNotFound;
         }
 
         return $student;
@@ -70,7 +72,7 @@ class RepositoryInMemory implements Students\Repository {
     public function insertPhones(Student $student): void {
         foreach ($student->getPhones() as $phone) {
             if (!empty($this->phones[(string) $phone])) {
-                throw new \Exception('Telefone já existe');
+                throw new PhoneAlreadyExists($phone);
             } else {
                 $this->phones[(string) $phone] = $phone;
             }

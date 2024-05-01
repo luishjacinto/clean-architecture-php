@@ -4,6 +4,7 @@ namespace Luishjacinto\CleanArchitecturePhp\Domain\Students;
 
 use Luishjacinto\CleanArchitecturePhp\Domain\CPF;
 use Luishjacinto\CleanArchitecturePhp\Domain\Email;
+use Luishjacinto\CleanArchitecturePhp\Domain\Students\Exceptions\StudentWithMoreThanTwoPhones;
 
 
 class Student {
@@ -48,6 +49,9 @@ class Student {
     }
 
     public function addPhone(string $phoneDDD, string $phoneNumber) {
+        if (count($this->phones) >= 2) {
+            throw new StudentWithMoreThanTwoPhones;
+        }
         $this->phones[] = new Phone($phoneDDD, $phoneNumber);
 
         return $this;

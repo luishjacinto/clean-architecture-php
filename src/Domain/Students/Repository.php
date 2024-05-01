@@ -22,7 +22,7 @@ interface Repository extends Domain\Repository {
      * @param Student $student
     */
 
-    public function add($aluno): void;
+    public function add($student): void;
 
     /**
      * @param Student $student

@@ -4,6 +4,7 @@ namespace Luishjacinto\CleanArchitecturePhp\Infrastructure\Students;
 
 use Luishjacinto\CleanArchitecturePhp\Domain\CPF;
 use Luishjacinto\CleanArchitecturePhp\Domain\Students;
+use Luishjacinto\CleanArchitecturePhp\Domain\Students\Exceptions\StudentNotFound;
 use Luishjacinto\CleanArchitecturePhp\Domain\Students\Student;
 use Luishjacinto\CleanArchitecturePhp\Infrastructure;
 
@@ -58,7 +59,7 @@ class RepositoryWithPDO extends Infrastructure\RepositoryWithPDO implements Stud
         $results = $statement->fetchAll(\PDO::FETCH_ASSOC);
 
         if (count($results) === 0) {
-            throw new \Exception('Aluno não encontrado');
+            throw new StudentNotFound;
         }
 
         return $this->mapResults($results)[0];

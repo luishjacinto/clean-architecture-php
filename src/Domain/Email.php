@@ -1,23 +1,22 @@
 <?php
 
 namespace Luishjacinto\CleanArchitecturePhp\Domain;
+use Luishjacinto\CleanArchitecturePhp\Domain\Students\Exceptions\InvalidEmailAddress;
 
 class Email implements \Stringable {
 
     private string $address;
 
     public function __construct(string $address) {
-        $this->validate($address);
         $this->address = $address;
+        $this->validate($address);
     }
 
     private function validate(string $address) {
         $addressInvalid = filter_var($address, FILTER_VALIDATE_EMAIL) === false;
 
         if ($addressInvalid) {
-            throw new \InvalidArgumentException(
-                "Endereço de e-mail '{$address}' inválido"
-            );
+            throw new InvalidEmailAddress($this);
         }
     }
 

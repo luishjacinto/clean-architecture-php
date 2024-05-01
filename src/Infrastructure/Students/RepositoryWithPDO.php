@@ -17,7 +17,7 @@ class RepositoryWithPDO extends Infrastructure\RepositoryWithPDO implements Stud
     */
 
     public function get(): array {
-        $sql = 
+        $sql =
         "    SELECT
                 cpf,
                 name,

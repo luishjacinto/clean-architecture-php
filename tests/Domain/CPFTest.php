@@ -2,7 +2,7 @@
 
 namespace Tests\Domain;
 
-use Luishjacinto\CleanArchitecturePhp\Domain\CPF;
+use Luishjacinto\CleanArchitecturePhp\Lib\Domain\CPFs\CPF;
 use PHPUnit\Framework\TestCase;
 
 class CPFTest extends TestCase {

@@ -1,10 +1,10 @@
 <?php
 
 namespace Tests\Application\Students;
-use Luishjacinto\CleanArchitecturePhp\Application\Students\EnrollStudent;
-use Luishjacinto\CleanArchitecturePhp\Application\Students\EnrollStudentDto;
-use Luishjacinto\CleanArchitecturePhp\Domain\CPF;
-use Luishjacinto\CleanArchitecturePhp\Infrastructure\Students\RepositoryInMemory;
+use Luishjacinto\CleanArchitecturePhp\Academic\Application\Students\EnrollStudent;
+use Luishjacinto\CleanArchitecturePhp\Academic\Application\Students\EnrollStudentDto;
+use Luishjacinto\CleanArchitecturePhp\Lib\Domain\CPFs\CPF;
+use Luishjacinto\CleanArchitecturePhp\Academic\Infrastructure\Students\RepositoryInMemory;
 use PHPUnit\Framework\TestCase;
 
 class EnrollStudentTest extends TestCase {

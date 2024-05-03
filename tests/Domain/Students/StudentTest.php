@@ -2,10 +2,10 @@
 
 namespace Tests\Domain\Students;
 
-use Luishjacinto\CleanArchitecturePhp\Domain\CPF;
-use Luishjacinto\CleanArchitecturePhp\Domain\Email;
-use Luishjacinto\CleanArchitecturePhp\Domain\Students\Phone;
-use Luishjacinto\CleanArchitecturePhp\Domain\Students\Student;
+use Luishjacinto\CleanArchitecturePhp\Lib\Domain\CPFs\CPF;
+use Luishjacinto\CleanArchitecturePhp\Academic\Domain\Email;
+use Luishjacinto\CleanArchitecturePhp\Academic\Domain\Students\Phone;
+use Luishjacinto\CleanArchitecturePhp\Academic\Domain\Students\Student;
 use PHPUnit\Framework\TestCase;
 
 class StudentTest extends TestCase

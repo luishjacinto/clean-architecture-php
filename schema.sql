@@ -20,3 +20,9 @@ CREATE TABLE recommendations (
     FOREIGN KEY (recommended_student_cpf) REFERENCES students(cpf),
     FOREIGN KEY (referrer_student_cpf) REFERENCES students(cpf)
 )
+
+CREATE TABLE labels (
+    id INT AUTOINCREMENT PRIMARY KEY,
+    cpf TEXT,
+    name TEXT
+)

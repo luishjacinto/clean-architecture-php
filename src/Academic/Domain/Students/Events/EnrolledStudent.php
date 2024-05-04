@@ -22,4 +22,11 @@ class EnrolledStudent implements Event {
         return $this->studentCPF;
     }
 
+    public function jsonSerialize() {
+        return get_object_vars((object) [
+            "moment" => $this->moment(),
+            "studentCPF" => (string) $this->studentCPF()
+        ]);
+    }
+
 }

@@ -2,7 +2,7 @@
 
 namespace Luishjacinto\CleanArchitecturePhp\Lib\Domain;
 
-interface Event {
+interface Event extends \JsonSerializable {
 
     public function moment(): \DateTimeImmutable;
 
